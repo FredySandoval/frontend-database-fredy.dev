@@ -1,4 +1,5 @@
 # frontend-database-fredy-dev
+See [DEMO](https://database.fredy.dev/).
 
 ## Project setup
 ```
@@ -16,4 +17,3 @@ npm run build
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

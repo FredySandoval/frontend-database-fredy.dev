@@ -1,60 +1,51 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+    <v-app-bar app color="primary" :hide-on-scroll="hideOnScroll">
+      <p>Front-End with Vue and Back-End with Express and NeDB</p>
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
+      <LoginPage/>
+      <DataBasep/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+// import HelloWorld from "./components/HelloWorld";
+import LoginPage from "./components/LoginPage"
+import DataBasep from "./components/databasep"
+// import Databasep from './components/databasep.vue'
 
 export default {
-  name: 'App',
-
+  name: "App",
   components: {
-    HelloWorld,
+    LoginPage,
+    DataBasep
   },
 
   data: () => ({
-    //
+    hideOnScroll: false
   }),
+  mounted(){
+    setTimeout(() => {
+      this.hideOnScroll = true;
+    }, 3000);
+  }
 };
 </script>
+<style scoped>
+p {
+  padding: 0px;
+  margin: 0px;
+  font-size: 2vw;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+@media only screen and (max-width: 500px) {
+  p {
+    font-size: 4vw;
+  }
+}
+</style>

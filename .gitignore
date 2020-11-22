@@ -2,7 +2,7 @@
 node_modules
 /dist
 
-
+/dist/indexfiles.tar.gz
 # local env files
 .env.local
 .env.*.local
